@@ -88,7 +88,7 @@ model = dict(
     ))
 
 # base dataset settings
-dataset_type = 'CocoDataset'
+dataset_type = 'topdown_coco_weijing_dataset'
 data_mode = 'topdown'
 data_root = 'data/coco/'
 

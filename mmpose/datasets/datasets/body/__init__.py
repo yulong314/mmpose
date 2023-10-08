@@ -14,5 +14,5 @@ from .posetrack18_video_dataset import PoseTrack18VideoDataset
 __all__ = [
     'CocoDataset', 'MpiiDataset', 'MpiiTrbDataset', 'AicDataset',
     'CrowdPoseDataset', 'OCHumanDataset', 'MhpDataset', 'PoseTrack18Dataset',
-    'JhmdbDataset', 'PoseTrack18VideoDataset', 'HumanArtDataset'
+    'JhmdbDataset', 'PoseTrack18VideoDataset', 'HumanArtDataset','TopDownCocoWeijingDataset'
 ]
