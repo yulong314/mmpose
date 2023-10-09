@@ -8,8 +8,8 @@ input_size = (288, 384)
 max_epochs = 420
 stage2_num_epochs = 30
 base_lr = 4e-3
-train_batch_size = 256
-val_batch_size = 64
+train_batch_size = 8
+val_batch_size = 8
 
 train_cfg = dict(max_epochs=max_epochs, val_interval=10)
 randomness = dict(seed=21)
@@ -105,7 +105,7 @@ model = dict(
 # base dataset settings
 dataset_type = 'CocoDataset'
 data_mode = 'topdown'
-data_root = 'data/coco/'
+data_root = '/s/ul/full_2/label/part/daylight128/'
 
 backend_args = dict(backend='local')
 # backend_args = dict(
