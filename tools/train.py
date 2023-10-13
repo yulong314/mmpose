@@ -2,7 +2,7 @@
 import argparse
 import os
 import os.path as osp
-
+import torch
 from mmengine.config import Config, DictAction
 from mmengine.runner import Runner
 
@@ -137,6 +137,7 @@ def merge_args(cfg, args):
 
 
 def main():
+    torch.multiprocessing.set_sharing_strategy('file_system')
     args = parse_args()
 
     # load config
