@@ -1,3 +1,4 @@
+import copy
 _base_ = ['../../../_base_/default_runtime.py']
 
 # runtime
@@ -113,7 +114,7 @@ val_pipeline = [
     dict(type='TopdownAffine', input_size=codec['input_size']),
     dict(type='PackPoseInputs')
 ]
-
+test_pipeline = val_pipeline[1:]
 # data loaders
 train_dataloader = dict(
     batch_size=64,
@@ -145,8 +146,8 @@ val_dataloader = dict(
         test_mode=True,
         pipeline=val_pipeline,
     ))
-test_dataloader = val_dataloader
-
+test_dataloader = copy.deepcopy(val_dataloader)
+test_dataloader['dataset']['pipeline'] = test_pipeline
 # evaluators
 val_evaluator = dict(
     type='CocoMetric',
